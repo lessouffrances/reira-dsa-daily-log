@@ -13,7 +13,7 @@ class Solution
         int n = nums.size();
         int mid = n / 2;
         vector<int> left = mergeSort( vector<int>(nums.begin() + nums.begin()+mid) );
-        vector<int> right = mergeSort( vector<int>(nums.begin()+mid+1, nums.end()) );
+        vector<int> right = mergeSort( vector<int>(nums.begin()+mid, nums.end()) );
         return merge(left, right);
     }
 
