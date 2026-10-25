@@ -4,12 +4,11 @@ class Solution
     string simplifyPath(string path) 
     {
         if (path.length() == 0) return "";
-
+ 
         stack<string> deck;
         string curr = "";
 
         for (char ch : path+"/") {
-            // the back slash is an important signal
             if (ch == '/') {
                 if (curr == "..") {
                     if (!deck.empty()) {
